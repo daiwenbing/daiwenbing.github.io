@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -8,5 +9,33 @@
 <body>
 
 <center>这是戴文兵的第一个网站</center> 
+=======
+<!DOCTYPE html>
+<html>
+<head>
+<title>戴文兵的网站</title>
+</head>
+<body>
+<h1>这是我使用github pages搭建的个人站点。mr_戴721491635</h1>
+<script>
+function browserRedirect() {
+    var sUserAgent = navigator.userAgent.toLowerCase();
+    var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+    var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+    var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+    var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+    var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+    var bIsAndroid = sUserAgent.match(/android/i) == "android";
+    var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+    var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+    if (!(bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) ){
+        window.location.href="http://www.renrendaipai.com";
+    } else {
+        window.location.href="http://m.renrendaipai.com/";
+    }
+}
+//browserRedirect();
+</script>
+>>>>>>> 264002a11a38cc7b537211ed554befe38f728131
 </body>
 </html>
