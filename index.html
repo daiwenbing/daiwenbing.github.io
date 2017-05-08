@@ -1,4 +1,20 @@
-﻿<script>
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>简历</title>
+</head>
+
+<body>
+<center>个人简历</center>
+<script>
+  
+    function love(){
+      window.location.replace("second.html"); //刷新当前页面，重新向服务器请求数据
+</script>
+<input type="button" value="我的简历" onclick=javascrtpt:browserRedirect()>
+<input type="button" value="love" onclick=javascrtpt:love()>
+<script>
 function browserRedirect() {
     var sUserAgent = navigator.userAgent.toLowerCase();
     var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
@@ -10,10 +26,12 @@ function browserRedirect() {
     var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
     var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
     if (!(bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) ){
-        window.location.href="http://blog.csdn.net/lmj623565791";
+        window.location.href="http://blog.csdn.net/daiwenbingg";
     } else {
-        window.location.href="http://m.blog.csdn.net/blog/index?username=lmj623565791";
+        window.location.href="http://m.blog.csdn.net/blog/index?username=daiwenbingg";
     }
 }
-browserRedirect();
+
 </script>
+</body>
+</html>
