@@ -2,7 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>简历</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="http://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>个人主页</title>
 <style type="text/css">
 html{
    width:100%;
@@ -22,7 +27,7 @@ font-size: 12px;
 
 color: #999999;
 
-background-color: #FDFDE0;
+background-color:#353A48;
 
 }
 a{ 
@@ -62,8 +67,7 @@ color: #000;
 }
 </style>
 </head>
-<body background="./pictur/head_bg.jpg">
-<center>个人主页</center>
+<body >
 <script>
 function browserRedirect() {
     var sUserAgent = navigator.userAgent.toLowerCase();
@@ -86,6 +90,40 @@ function love(){
 }
 
 </script>
+
+<!--轮播-->
+<dir style="width: 50%;margin: auto" >
+<div id="myCarousel" class="carousel slide" >
+    <!-- 轮播（Carousel）指标 -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <!-- 轮播（Carousel）项目 -->
+    <div class="carousel-inner">
+        <div class="item active" >
+            <img src="./pictur/1.jpg" style=" width: 100%;height: 350px" alt="First slide" >
+        </div>
+        <div class="item">
+            <img src="./pictur/2.jpg" style="width: 100%;height: 350px" alt="Second slide">
+        </div>
+        <div class="item">
+            <img src="./pictur/3.jpg" style="width: 100%;height: 350px" alt="Third slide">
+        </div>
+    </div>
+    <!-- 轮播（Carousel）导航 -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+</dir>
+<!--轮播-->
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
 
 <tr>
