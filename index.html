@@ -8,7 +8,13 @@
     <script src="http://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
     <script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <title>个人主页</title>
-    <link rel="shortcut icon" href="pictur/head.jpg" />
+    <link rel="shortcut icon" href="babypic/baby_pic1.png" />
+    <!---->
+    <link rel="stylesheet" href="http://www.daiwei.org/global/css/animate.css">
+    <link rel="stylesheet" href="./fonts/fontCss.css">
+    <link rel="stylesheet" type="text/css" href="http://www.daiwei.org/global.css">
+    <link rel="stylesheet" type="text/css" href="./css/music.css">
+    <script src="js/music.js"></script>
 <style type="text/css">
 html{
    width:100%;
@@ -34,7 +40,9 @@ text-decoration:none
 </style>
 </head>
 <body >
-
+<div class="music-bg" style="height: 100%;filter: blur(100px);transition:all 0.3s" id="music-bg">
+    <div class="music-mask"></div>
+</div>
 <!--head-->
 <nav class="navbar navbar-inverse" role="navigation">
     <div class="container-fluid">
@@ -292,5 +300,39 @@ text-decoration:none
 
 <p class="text-center">CopyRight 2015-2025 www.daiwenbing.com AllRights Reserved</p>
 <p class="text-center">戴文兵 版权所有</p>
+    </div>
 </body>
+<script src="http://www.daiwei.org/global/js/jquery.js"></script>
+<!--<script src="http://www.daiwei.org/global/js/componentJs.js"></script>-->
+<script src="./js/music.js"></script>
+<script>
+    window.onload = function(){
+        MC.music({
+            hasAjax:false,
+            left:'50%',
+            bottom:'50%',
+            musicChanged:function(ret){
+//				 alert(ret.url);
+//				 getMusic_buffer(ret.url);
+//                 return;
+                var data = ret.data;
+                var index = ret.index;
+                var imageUrl = data[index].img_url;
+
+                var music_bg = document.getElementById('music-bg');
+                music_bg.style.background = 'url('+imageUrl+')no-repeat';
+                music_bg.style.backgroundSize = 'cover';
+                music_bg.style.backgroundPosition = 'center 30%';
+            },
+
+            getMusicInfo:function(data){
+
+            },
+
+            musicPlayByWebAudio:function(ret){
+
+            },
+        });
+    }
+</script>
 </html>
